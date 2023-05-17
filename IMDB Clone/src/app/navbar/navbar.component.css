@@ -1,0 +1,26 @@
+body {
+  background-color: black;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+}
+
+.movies-page {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  margin-top: 30px;
+  color: white;
+  margin-left: 120px;
+  margin-right: 120px;
+  cursor: pointer;
+}
+
+img {
+  margin-top: 30px;
+  margin-left: 30px;
+}

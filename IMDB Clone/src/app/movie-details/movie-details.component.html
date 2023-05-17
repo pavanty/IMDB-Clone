@@ -1,0 +1,41 @@
+<body>
+
+
+  <div *ngIf="!loader">
+    <div class="movie-main-image">
+
+      <img [src]="'https://image.tmdb.org/t/p/original/'+moviedetails?.backdrop_path" />
+      <div>
+        <img class="poster-image" [src]="'https://image.tmdb.org/t/p/original/'+moviedetails?.poster_path" />
+        <div class="main-text">
+          <p> <span class="text">Title: </span> {{moviedetails?.original_title}}</p>
+          <p> <span class="text">Language: </span> {{moviedetails?.original_language}}</p>
+          <p> <span class="text">Studio: </span> {{moviedetails.production_companies[0].name}}</p>
+          <p> <span class="text">Country: </span> {{moviedetails.production_countries[0].name}}</p>
+          <p><span class="text">Genres: </span><span class="genre">{{moviedetails.genres[0].name}}</span><span
+              class="genre">{{moviedetails.genres[1].name}}</span>,<span
+              class="genre">{{moviedetails.genres[2].name}}</span> </p>
+          <p><span class="text">Overview: </span>{{moviedetails.overview}}</p>
+          <a class="anchor" [href]="moviedetails.homepage">Watch Now</a>
+          <a class="anchor" [routerLink]="['/']">Home Page</a>
+        </div>
+      </div>
+    </div>
+    <span></span>
+  </div>
+
+
+
+
+
+  <div style="background: #000000; padding: 10px;">
+    <ngx-skeleton-loader appearance="facebook" *ngIf="loader" [theme]="{ 
+        'border-radius': '1px',
+        height: '20px',
+        
+        'background-color': '#000000',
+        border: '1px solid #000000'
+        
+      }"></ngx-skeleton-loader>
+  </div>
+</body>

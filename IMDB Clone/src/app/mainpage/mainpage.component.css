@@ -1,0 +1,52 @@
+img {
+  width: 55%;
+}
+
+body {
+  background-color: black;
+
+  margin: 0;
+}
+
+.product-page {
+  margin-left: 30px;
+
+
+}
+
+.ngcontainer {
+  background-color: aliceblue;
+}
+
+.main-page {
+  color: red;
+  margin-bottom: 20px;
+}
+
+img {
+  transition: 0.5 ease-in-out;
+}
+
+img:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.9);
+}
+
+.search {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+input {
+  border-radius: 3px;
+  border-style: solid;
+  border-color: white;
+  padding: 5px;
+}
+
+input::placeholder {
+  color: aliceblue;
+}

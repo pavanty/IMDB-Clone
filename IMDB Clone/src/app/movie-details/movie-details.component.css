@@ -1,0 +1,63 @@
+img {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.movie-main-image {
+  position: relative;
+  width: 100%;
+  height: 400px;
+
+}
+
+.poster-image {
+  position: absolute;
+  top: 300px;
+  left: 40px;
+  bottom: 50px;
+  width: 200px;
+  height: 200px;
+
+}
+
+
+body {
+  background-color: black;
+
+  margin: 0;
+}
+
+.main-text {
+  position: absolute;
+
+  left: 280px;
+
+
+}
+
+.anchor {
+  border-radius: 5px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  border-color: white;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+a.anchor:hover {
+  border-color: skyblue;
+  color: skyblue;
+}
+
+.text {
+  color: gold;
+}
+
+.genre {
+  color: red;
+}

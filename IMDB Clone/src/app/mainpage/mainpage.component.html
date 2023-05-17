@@ -1,0 +1,44 @@
+<body>
+  <app-navbar (eventclick)="handlegettrendingmovies($event)"></app-navbar>
+  <div class="search">
+    <input [(ngModel)]="searchTerm" placeholder="Search">
+  </div>
+  <div class="details-page">
+    <div class="row product-page">
+      <ng-container *ngFor="let product of productdetails?.results|filter:searchTerm">
+
+
+        <div *ngIf="!loader" ngClass="main-page" [routerLink]="['//moviedetailS', product?.id]"
+          class="card col-sm-6 col-lg-2 col-md-2 ">
+          <img [src]="
+                'https://image.tmdb.org/t/p/original/' + product?.poster_path
+              " />
+          <h5 class="card-title" style="
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width:15ch;
+              ">
+            {{ product.original_title}}
+          </h5>
+
+          <p>&#11088;{{ product.vote_average }}</p>
+          <p>Vote {{ product.popularity }}</p>
+        </div>
+
+
+      </ng-container>
+    </div>
+  </div>
+</body>
+
+<div style="background: #000000; padding: 10px;">
+  <ngx-skeleton-loader appearance="facebook" *ngIf="loader" [theme]="{ 
+        'border-radius': '1px',
+        height: '20px',
+        
+        'background-color': '#000000',
+        border: '1px solid #000000'
+        
+      }"></ngx-skeleton-loader>
+</div>
