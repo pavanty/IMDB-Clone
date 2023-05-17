@@ -1,12 +1,8 @@
-# IMDB-Clone
-steps to run the application
-
+### Code Written In Angular
+#### Steps to run the application
 clone the github repository
 
-steps to run the code
+#### Steps to run the code
+npm install --force
 
-  npm install
-  
-  ng serve -o
-
-code written in angular
+ng serve -o
